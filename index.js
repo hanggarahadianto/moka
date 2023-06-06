@@ -11,6 +11,10 @@ app.use("/order", orderRouter);
 
 const db = require("./models/index");
 
+app.get("/", (req, res) => {
+  res.send("hello moka");
+});
+
 db.sequelize
   .sync()
   .then(() => {
